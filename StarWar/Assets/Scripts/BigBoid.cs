@@ -5,19 +5,37 @@ using UnityEngine;
 public class BigBoid : MonoBehaviour
 {
     public Vector3 force;
-    public float mass = 1;
+    public float mass;
     public Vector3 acceleration;
     public Vector3 velocity;
     public float speed;
+    public float maxSpeed;
+    public float wayPointDistance;
+
+    public Path path;
 
     public Vector3 PathFollow()
     {
-        return Vector3.zero;
+        Vector3 next = path.Next();
+        if (Vector3.Distance(transform.position, next) < wayPointDistance)
+        {
+            path.AdvanceToNext();
+        }
+        return Seek(next);
+    }
+
+    public Vector3 Seek(Vector3 target)
+    {
+        Vector3 toTarget = target - transform.position;
+        Vector3 desired = toTarget.normalized * maxSpeed;
+        return (desired - velocity);
     }
 
     public Vector3 CalculateForce()
     {
-        return Vector3.zero;
+        Vector3 f = Vector3.zero;
+        f += PathFollow();
+        return f;
     }
 
     // Start is called before the first frame update
@@ -32,11 +50,12 @@ public class BigBoid : MonoBehaviour
         force = CalculateForce();
         acceleration = force / mass;
         velocity += acceleration * Time.deltaTime;
+        transform.position += velocity * Time.deltaTime;
         speed = velocity.magnitude;
 
         if (speed > 0)
         {
-            
+            transform.forward = velocity;
         }
     }
 }
