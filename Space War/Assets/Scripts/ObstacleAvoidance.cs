@@ -81,8 +81,7 @@ public class ObstacleAvoidance : SteeringBehaviour
         RaycastHit info;
         bool collided = Physics.SphereCast(transform.position, feelerRadius, direction, out info, depth, mask.value);
         Vector3 feelerEnd = collided ? info.point : (transform.position + direction * depth);
-        feelers[feelerNum] = new FeelerInfo(feelerEnd, info.normal
-            , collided, feelerType);
+        feelers[feelerNum] = new FeelerInfo(feelerEnd, info.normal, collided, feelerType);
     }
 
     System.Collections.IEnumerator UpdateFrontFeelers()

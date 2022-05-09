@@ -25,23 +25,23 @@ public class Path : MonoBehaviour
         PopulatePath();
     }
 
-    // public void OnDrawGizmos() {
-    //     PopulatePath();
-    //     Gizmos.color = Color.white;
-    //     for(int i = 0 ; i < wayPoints.Count ; i ++)
-    //     {
-    //         Gizmos.DrawSphere(wayPoints[i], 5);
-    //         if (i != wayPoints.Count - 1)
-    //         {
-    //             Gizmos.DrawLine(wayPoints[i], wayPoints[i + 1]);
-    //         }
-    //     }
+    public void OnDrawGizmos() {
+        PopulatePath();
+        Gizmos.color = Color.white;
+        for(int i = 0 ; i < wayPoints.Count ; i ++)
+        {
+            Gizmos.DrawSphere(wayPoints[i], 5);
+            if (i != wayPoints.Count - 1)
+            {
+                Gizmos.DrawLine(wayPoints[i], wayPoints[i + 1]);
+            }
+        }
 
-    //     if (isLooped)
-    //     {
-    //         Gizmos.DrawLine(wayPoints[wayPoints.Count - 1], wayPoints[0]);
-    //     }
-    // }
+        if (isLooped)
+        {
+            Gizmos.DrawLine(wayPoints[wayPoints.Count - 1], wayPoints[0]);
+        }
+    }
 
     public Vector3 Next()
     {

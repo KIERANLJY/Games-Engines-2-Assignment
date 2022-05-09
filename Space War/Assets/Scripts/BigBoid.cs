@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BigBoid : MonoBehaviour
 {
-    
     public Vector3 velocity;
     public float speed;
     public Vector3 acceleration;
@@ -56,30 +55,30 @@ public class BigBoid : MonoBehaviour
     }
 
 
-    public void OnDrawGizmos()
-    {
-        Gizmos.color = Color.magenta;
-        //Gizmos.DrawLine(transform.position, transform.position + velocity);
+    // public void OnDrawGizmos()
+    // {
+    //     Gizmos.color = Color.magenta;
+    //     //Gizmos.DrawLine(transform.position, transform.position + velocity);
 
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, transform.position + acceleration);
+    //     Gizmos.color = Color.blue;
+    //     Gizmos.DrawLine(transform.position, transform.position + acceleration);
 
-        Gizmos.color = Color.red;
-        //Gizmos.DrawLine(transform.position, transform.position + force * 10);
+    //     Gizmos.color = Color.red;
+    //     //Gizmos.DrawLine(transform.position, transform.position + force * 10);
 
-        if (arriveEnabled)
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(arriveTargetTransform.position, slowingDistance);
-        }
+    //     if (arriveEnabled)
+    //     {
+    //         Gizmos.color = Color.yellow;
+    //         Gizmos.DrawWireSphere(arriveTargetTransform.position, slowingDistance);
+    //     }
 
-        if (pursueEnabled && Application.isPlaying)
-        {
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawLine(transform.position, pursueTargetPos);
-        }
+    //     if (pursueEnabled && Application.isPlaying)
+    //     {
+    //         Gizmos.color = Color.cyan;
+    //         Gizmos.DrawLine(transform.position, pursueTargetPos);
+    //     }
 
-    }
+    // }
 
     public Vector3 OffsetPursue(BigBoid leader)
     {

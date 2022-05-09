@@ -17,5 +17,6 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         transform.position = battleShip.transform.position + cameraOffset;
+        transform.rotation = battleShip.transform.rotation;
     }
 }
