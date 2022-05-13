@@ -6,11 +6,13 @@ public class TraiwyndFighterController : MonoBehaviour
 {
     public GameObject laserBeam;
     private bool allowAttack;
+    Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
     {
         allowAttack = true;
+        offset = new Vector3(0, 0, -15);
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class TraiwyndFighterController : MonoBehaviour
     {
         if (allowAttack)
         {
-            GameObject.Instantiate(laserBeam, this.transform.position, this.transform.rotation);
+            GameObject.Instantiate(laserBeam, transform.position + offset, transform.rotation);
             allowAttack = false;
             StartCoroutine(AttackCoolDown());
         }
@@ -31,7 +33,7 @@ public class TraiwyndFighterController : MonoBehaviour
 
     IEnumerator AttackCoolDown()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(Random.Range(1,1.5f));
         allowAttack = true;
     }
 }

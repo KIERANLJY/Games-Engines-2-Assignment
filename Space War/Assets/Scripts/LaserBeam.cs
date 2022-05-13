@@ -26,4 +26,12 @@ public class LaserBeam : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Fighter"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

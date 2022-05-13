@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2181622792535010974}
   m_Layer: 6
   m_Name: AstraBattleShip
-  m_TagString: Untagged
+  m_TagString: BattleShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,6 +131,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 05f7ab4b58f5b39439fb3c403dea756c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 05f7ab4b58f5b39439fb3c403dea756c, type: 3}
+      propertyPath: m_TagString
+      value: BattleShip
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05f7ab4b58f5b39439fb3c403dea756c, type: 3}

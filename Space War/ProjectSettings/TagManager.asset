@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - BattleShip
+  - Fighter
   layers:
   - Default
   - TransparentFX
