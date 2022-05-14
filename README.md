@@ -18,3 +18,13 @@ https://youtu.be/5sU4OvV2moU
 # Most Proud Of
 I am most proud of design of different scenes, different steering behaviours implemented for space ships, and the space portal implemented by shader graph and particle system.
 
+# Events Summary
+1. Astra fleet completes resource extraction and leaves the planet.
+2. Astra fleet dodges meteorites in the path.
+3. Traiwynd fleet emerges from space portal.
+4. Astra fleet changes route to escape.
+5. Traiwynd fighters pursue Astra fleet and shoot laser attacks.
+6. Astra fighters depart.
+7. Astra fighters and Traiwynd fighters attack each other using laser beam.
+8. Astra fleet escape through space portal.
+
