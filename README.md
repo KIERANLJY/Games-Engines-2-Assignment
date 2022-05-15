@@ -45,6 +45,8 @@ I am most proud of design of different scenes, different steering behaviours imp
 - Shader Graph
 - Particle System
 
+![image](https://github.com/KIERANLJY/Games-Engines-2-Assignment/blob/main/Images/shader.png)
+
 
 ## Canvas
 - Replay button: Replay the project from first scene.
